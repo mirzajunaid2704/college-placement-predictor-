@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Placement Predictor</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header>
+    <h1>College Placement Predictor</h1>
+    <p>Predict your placement chances & improve your skills</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Enter Your Details</h2>
+
+    <label>CGPA</label>
+    <input type="number" id="cgpa" step="0.1" placeholder="e.g. 7.5">
+
+    <label>Skills</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="skill"> DSA</label>
+      <label><input type="checkbox" class="skill"> Web Development</label>
+      <label><input type="checkbox" class="skill"> SQL</label>
+      <label><input type="checkbox" class="skill"> Python</label>
+    </div>
+
+    <label>Internship Experience</label>
+    <select id="internship">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <label>Communication Skills (1–10)</label>
+    <input type="range" id="communication" min="1" max="10">
+
+    <button onclick="predictPlacement()">Predict Placement</button>
+  </section>
+
+  <section class="result-section" id="result">
+    <h2>Prediction Result</h2>
+    <p id="percentage">---</p>
+    <p id="status"></p>
+    <div id="roadmap"></div>
+  </section>
+
+  <footer>
+    <p>Built for Hackathon | Frontend Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
